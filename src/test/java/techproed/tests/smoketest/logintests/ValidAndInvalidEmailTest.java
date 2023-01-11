@@ -22,7 +22,7 @@ public class ValidAndInvalidEmailTest {
     HomePage homePage;
     LoginPage loginPage;
     @Test
-    public void invalidEmailTest(){
+    public void emailTest(){
         Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
         homePage=new HomePage();
         loginPage=new LoginPage();
@@ -32,18 +32,8 @@ public class ValidAndInvalidEmailTest {
         loginPage.userName.sendKeys("jack");
         ReusableMethods.waitFor(3);
         ReusableMethods.verifyElementDisplayed(loginPage.invalidEmailMessage);
-
-    }
-    @Test
-    public void validEmailTest(){
-        Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
-        homePage=new HomePage();
-        loginPage=new LoginPage();
         ReusableMethods.waitFor(3);
-        homePage.homePageLoginLink.click();
-        ReusableMethods.waitFor(3);
-        loginPage.userName.sendKeys("jack@gmail.com");
-        ReusableMethods.waitFor(3);
+        loginPage.userName.sendKeys("@gmail.com");
         ReusableMethods.verifyElementNotDisplayed(loginPage.invalidEmailMessage);
     }
 }
