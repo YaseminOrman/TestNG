@@ -13,9 +13,6 @@ public class LoginPage {
     public WebElement password;
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement loginButton;
-    @FindBy(xpath="//div[text()='Bad credentials']")
-    public WebElement errorMessage;
-    @FindBy(xpath="//div[text()='email must be a valid email']")
-    public WebElement invalidEmailMessage;
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement errorMessage_incorrectEmailPass;
 }
-
