@@ -15,4 +15,16 @@ public class LoginPage {
     public WebElement loginButton;
     @FindBy(xpath = "//div[@role='alert']")
     public WebElement errorMessage_incorrectEmailPass;
+    @FindBy(xpath="//div[text()='Bad credentials']")
+    public WebElement errorMessage;
+    @FindBy(xpath="//div[text()='email must be a valid email']")
+    public WebElement invalidEmailMessage;
+
+    @FindBy(linkText = "Logout")
+    public WebElement logoutLink;
+
+    @FindBy(xpath = "//button[text()='OK']")
+    public WebElement OK;
+
+
 }
