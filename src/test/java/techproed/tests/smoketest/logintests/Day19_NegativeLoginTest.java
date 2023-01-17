@@ -3,6 +3,10 @@ import com.github.javafaker.Faker;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import techproed.pages.HomePage;
+import com.github.javafaker.Faker;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import techproed.pages.HomePage;
 import techproed.pages.LoginPage;
 import techproed.utilities.ConfigReader;
 import techproed.utilities.Driver;
@@ -12,7 +16,7 @@ public class Day19_NegativeLoginTest {
     HomePage homePage;
     LoginPage loginPage;
     Faker faker;
-    @Test
+    @Test(groups = "minor-regression-group")
     public void US100208_Negative_Login() throws IOException {
 //        As customer, I should not be able to log in the application
         //going blue rental car home page

@@ -9,8 +9,9 @@ public class Day16_Annotations {
     @Test(enable=false) : Disable the test case. By default enable=true.
     @Test(priority=number) : prioritize/order test case execution.
     NOTE: Tests that has no priority parameter has a priority of 0. Test(priority=0)
-    TESTNG test cases runs in alp
-    We should use priority when there are multiple test cases in the same class
+    TestNG test cases runs in alphabetical order by default.
+    We should use priority when there are multiple test cases in the same class.
+    -3, 0(ALSO TESTS WITH NO PRIORITY), 4, 9
      */
     @BeforeSuite
     public void beforeSuite(){
@@ -61,11 +62,11 @@ public class Day16_Annotations {
     public void test4(){
         System.out.println("test4");
     }
-    @Test(priority = 1)
+    @Test(priority = 1,groups = "minor-regression-group")
     public void test5(){
         System.out.println("test5");
     }
-    @Test
+    @Test(groups = "minor-regression-group")
     public void test6(){
         System.out.println("test6");
     }
