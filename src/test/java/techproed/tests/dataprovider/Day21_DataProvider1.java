@@ -9,7 +9,7 @@ public class Day21_DataProvider1 {
     ****DataProvider is an annotation of testNG
     ****I use Data Provider to get data such as credentials from excel sheet
     ------------------------------------------------------------------------
-    How to you get data in you TestNG framework?
+    How do you get data in your TestNG framework?
     ****In Data provider method, I use @DataProvider annotation, in Test method I give the method name in the parameter
     ------------------------------------------------------------------------
     Data Provider has 2 parameters:
