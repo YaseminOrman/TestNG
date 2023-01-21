@@ -21,7 +21,7 @@ public class Day18_PositiveLoginTest {
     @Test
     public void US100201_Admin_Login(){
 //going blue rental car home page
-        Driver.getDriver().get(ConfigReader.getProperty(" "));
+        Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
 //        click on home page login link
         homePage = new HomePage();
         loginPage= new LoginPage();

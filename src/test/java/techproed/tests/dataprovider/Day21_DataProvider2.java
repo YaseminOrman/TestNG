@@ -1,4 +1,5 @@
 package techproed.tests.dataprovider;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import techproed.pages.HomePage;
@@ -59,4 +60,9 @@ public class Day21_DataProvider2 {
 //            IF USER ID IS DISPLAYED THEN LOGIN IS SUCCESSFUL
         ReusableMethods.verifyElementDisplayed(homePage.userID);
     }
+    @AfterMethod
+    public void tearDown(){
+        Driver.closeDriver();
+    }
+
 }

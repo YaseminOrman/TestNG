@@ -9,9 +9,9 @@
                     <include name="test6" />
                 </methods>
             </class>
-            <class name="techproed.tests.smoketest.logintests.Day18_PositiveLoginTest">
+            <class name="techproed.tests.smoketest.logintests.Day19_NegativeLoginTest">
                 <methods>
-                    <!--                RUN ALL BUT US100208_Negative_Login FROM Day18_PositiveLoginTest-->
+                    <!--                RUN ALL BUT US100208_Negative_Login FROM Day19_NegativeLoginTest-->
                     <exclude name="US100208_Negative_Login" />
                 </methods>
             </class>

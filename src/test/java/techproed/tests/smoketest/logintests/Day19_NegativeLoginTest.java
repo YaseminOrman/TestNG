@@ -50,6 +50,15 @@ public class Day19_NegativeLoginTest {
         homePage = new HomePage();
         loginPage= new LoginPage();
         ReusableMethods.waitFor(3);
+
+        try{
+            homePage.userID.click();
+            homePage.logoutLink.click();
+            homePage.OK.click();
+
+        }catch (Exception e){
+
+        }
         homePage.homePageLoginLink.click();
 //        sending credentials and clicking on login button
         ReusableMethods.waitFor(3);

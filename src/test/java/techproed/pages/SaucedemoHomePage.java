@@ -7,10 +7,9 @@ import techproed.utilities.Driver;
 
 public class SaucedemoHomePage {
 
-    public SaucedemoHomePage() {
-        PageFactory.initElements(Driver.getDriver(), this);
+    public SaucedemoHomePage(){
+        PageFactory.initElements(Driver.getDriver(),this);
     }
-
     @FindBy(id = "user-name")
     public WebElement usernameInput;
 

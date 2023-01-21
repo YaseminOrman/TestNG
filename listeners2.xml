@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="techproed.utilities.Listeners"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true"
+          name="/Users/yorman/eclipse-workspacep/testNGProject/src/test/java/techproed/utilities/Listeners.java">
+        <classes>
+            <class name="techproed.utilities.Listeners">
+                <methods>
+                    <include name="onTestSuccess"/>
+                    <include name="onTestFailure"/>
+                    <include name="onTestSkipped"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

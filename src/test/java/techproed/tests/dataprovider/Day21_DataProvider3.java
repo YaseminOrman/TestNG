@@ -20,21 +20,21 @@ public class Day21_DataProvider3 {
     public Object[][] customerData(){
 //    TEST DATA. GET DATA FROM EXCEL
 //        PATH OF EXCEL SHEET
-        String path="./src/test/java/resources/mysmoketestdata.xlsx";
+      String path = "./src/test/java/resources/mysmoketestdata.xlsx";
 //        SHEET NAME
-        String sheetName = "customer_info";
+      String sheetName ="customer_info";
 //        CALL EXCEL UTIL CLASS
-        ExcelUtils excelUtils=new ExcelUtils(path,sheetName);
+      ExcelUtils excelUtils = new ExcelUtils(path,sheetName);
 //        USE ONE OF THE EXCEL UTIL METHOD TO RECEIVE THE DATA FROM THE EXCEL
+     Object [][]customerCredentials = excelUtils.getDataArrayWithoutFirstRow();
 
-        Object [][] customerCredentials = excelUtils.getDataArrayWithoutFirstRow();
 //        Object [][] customerCredentials = {
 //                {"sam.walker@bluerentalcars.com","c!fas_art"},
 //                {"kate.brown@bluerentalcars.com","tad1$Fas"},
 //                {"raj.khan@bluerentalcars.com","v7Hg_va^"},
 //                {"pam.raymond@bluerentalcars.com","Nga^g6!"}
 //        };
-        return customerCredentials;
+      return customerCredentials;
     }
     //    1. Create a login method
     public void login(){

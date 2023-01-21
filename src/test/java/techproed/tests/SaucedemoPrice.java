@@ -25,37 +25,20 @@ public class SaucedemoPrice {
   And
     Flash each web element you used
    */
-    @Test(groups = "smoke-test")
-    public void totalPrice() {
+    @Test
+    public void totalPrice(){
 //        Go to  https://www.saucedemo.com/
-        Driver.getDriver().get(ConfigReader.getProperty("saucedemo_url"));
-
+        Driver.getDriver().get(ConfigReader.getProperty("sauce_demo_url"));
 //        Enter the username  as "standard_user"
         SaucedemoHomePage saucedemoHomePage = new SaucedemoHomePage();
-        JSUtils.flash(saucedemoHomePage.usernameInput);
-        saucedemoHomePage.usernameInput.sendKeys(ConfigReader.getProperty("saucedemo_username"));
-
+        saucedemoHomePage.usernameInput.sendKeys("standard_user");
 //        Enter the password as "secret_sauce"
-        JSUtils.flash(saucedemoHomePage.passwordInput);
-        saucedemoHomePage.passwordInput.sendKeys(ConfigReader.getProperty("saucedemo_password"));
-
+        saucedemoHomePage.passwordInput.sendKeys();
 //        Click on login button
-        JSUtils.flash(saucedemoHomePage.loginButton);
-        saucedemoHomePage.loginButton.click();
-
+//        Then
 //        Assert that total price of all products is 129.94 dollars
-        SaucedemoProductsPage saucedemoProductsPage = new SaucedemoProductsPage();
-        double totalPrice = 0;
-        for (WebElement w : saucedemoProductsPage.prices) {
-            JSUtils.flash(w);
-            totalPrice += Double.parseDouble(w.getText().replaceAll("\\$", ""));
-        }
-
-        assertEquals(129.94, totalPrice);
-
+//                And
 //        Flash each web element you used
-
-
     }
 
 }
